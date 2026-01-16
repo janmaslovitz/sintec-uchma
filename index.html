@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img src="./images/uchma-logo-white.png" class="header__logo" />
+      <nav>
+        <ul class="header__nav">
+          <li><a href="#booking">Бронирование</a></li>
+          <li><a href="#features">Формат отдыха</a></li>
+          <li><a href="#showcase">Наши дома</a></li>
+        </ul>
+      </nav>
+      <div class="phone-block">
+        <p class="phone-number">+1 (234) 567-88-99</p>
+        <button class="book-button">Забронировать</button>
+      </div>
+    </header>
+    <section class="cover">
+      <h1 class="cover__text">
+        Насладитесь природой Поволжья,<br />не лишая себя домашнего комфорта
+      </h1>
+      <img src=".//images/background-placeholder.png" class="cover__video">
+      <!-- <video
+        class="cover__video"
+        src="./images/uchma-video.MP4"
+        autoplay
+        loop
+      ></video> -->
+      <a href="#booking"
+        ><div class="cover__book-button">
+          <p>Забронируйте сейчас!</p>
+          <svg
+            class="cover__icon"
+            width="28"
+            height="16"
+            viewBox="0 0 28 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2 2L14 14L26 2"
+              stroke="white"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg></div
+      ></a>
+    </section>
+    <section class="booking" id="booking">
+      <h2 class="title-font">Забронировать дом</h2>
+      <form action="" method="get" class="booking__form">
+        <div class="input-date-wrapper">
+          <input
+            class="input-form"
+            placeholder="Дата заезда"
+            type="text"
+            onfocus="this.type = 'date'"
+            onblur="this.type = 'text'"
+            id="date-arrival"
+          />
+        </div>
+        <input
+          class="input-form"
+          placeholder="Дата выезда"
+          type="text"
+          onfocus="this.type = 'date'"
+          onblur="this.type = 'text'"
+          id="date-departure"
+        />
+        <input
+          class="input-form"
+          placeholder="Гости"
+          type="number"
+          name="form-guest-value"
+          id="form-guest-value"
+          min="1"
+          max="20"
+        />
+        <div class="form__submit-button">
+          <input class="book-button" type="submit" value="Подобрать дом" />
+        </div>
+      </form>
+      <p>Вам подходит 3 варианта:</p>
+      <div class="booking__items-list">
+        <div class="booking__item">
+          <article class="booking__card">
+            <div class="overlay">
+              <div class="booking__card-textblock">
+                <p class="booking__card-title">Дом "Охотничий"</p>
+                <ul class="booking__card-features">
+                  <li>30м²</li>
+                  <li>до 4 человек</li>
+                  <li>две раздельные спальни</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="booking__item">
+          <article class="booking__card">
+            <div class="overlay">
+              <div class="booking__card-textblock">
+                <p class="booking__card-title">Дом "Охотничий"</p>
+                <ul class="booking__card-features">
+                  <li>30м²</li>
+                  <li>до 4 человек</li>
+                  <li>две раздельные спальни</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="booking__item">
+          <article class="booking__card">
+            <div class="overlay">
+              <div class="booking__card-textblock">
+                <p class="booking__card-title">Дом "Охотничий"</p>
+                <ul class="booking__card-features">
+                  <li>30м²</li>
+                  <li>до 4 человек</li>
+                  <li>две раздельные спальни</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="features">
+      <h2 class="title-font opposite">Формат отдыха</h2>
+      <ul class="features__list">
+        <li class="features__item">
+          <h3 class="subtitle-font">Компанейский отдых</h3>
+          <div class="features__item-textblock">
+            <img class="features__item-image" src="./images/home.png" />
+            <ul class="features__item-text">
+              <li>Три вместительных дома со всеми удобствами</li>
+              <li>Беседка на 10 человек</li>
+              <li>Сезонное тематическое оформление</li>
+            </ul>
+          </div>
+        </li>
+        <li class="features__item">
+          <h3 class="subtitle-font">Активные приключения</h3>
+          <div class="features__item-textblock">
+            <img class="features__item-image" src="./images/buoy.png" />
+            <ul class="features__item-text">
+              <li>Оборудованная спортплощадка</li>
+              <li>Баня, сауна, бассейн</li>
+              <li>Непосредственная близость к Волге</li>
+            </ul>
+          </div>
+        </li>
+        <li class="features__item">
+          <h3 class="subtitle-font">Забота о себе</h3>
+          <div class="features__item-textblock">
+            <img class="features__item-image" src="./images/sun.png" />
+            <ul class="features__item-text">
+              <li>Живописная природа Поволжья</li>
+              <li>Массивные сосновые леса</li>
+              <li>Тихая и спокойная атмосфера вдалеке от города</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="showcase">
+      <h2 class="title-font">Наши дома</h2>
+      <div class="showcase__list">
+        <div class="showcase__item">
+          <article class="showcase__card">
+            <img src="./images/1.png" alt="" class="showcase__card-img" />
+            <div class="showcase__card-textblock">
+              <p class="subtitle-font">Дом «Охотничий»</p>
+              <div class="showcase__card-specs">
+                <span class="showcase__card__specs-places">до 6 мест</span>
+                <span class="showcase__card__specs-rooms">3 комн</span>
+                <span class="showcase__card__specs-space">62м²</span>
+              </div>
+              <ul class="showcase__card__features">
+                <li>уютная и просторная веранда</li>
+                <li>отдельный кабинет с рабочим столом</li>
+                <li>многозоновый климат-контроль</li>
+                <li>ванная комната с душевой</li>
+              </ul>
+              <div class="showcase__card__button-box">
+                <button class="book-button white">Подробнее</button>
+                <button class="book-button">Забронировать</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <img src="./images/uchma-logo-white.png" class="header__logo" />
+      <div class="phone-block">
+        <p class="phone-number">+1 (234) 567-88-99</p>
+        <button class="book-button">Забронировать</button>
+      </div>
+    </footer>
+  </body>
+</html>
