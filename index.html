@@ -28,7 +28,7 @@
       <h1 class="cover__text">
         Насладитесь природой Поволжья,<br />не лишая себя домашнего комфорта
       </h1>
-      <img src=".//images/background-placeholder.png" class="cover__video">
+      <img src=".//images/background-placeholder.png" class="cover__video" />
       <!-- <video
         class="cover__video"
         src="./images/uchma-video.MP4"
@@ -61,7 +61,7 @@
       <form action="" method="get" class="booking__form">
         <div class="input-date-wrapper">
           <input
-            class="input-form"
+            class="input-form calendar"
             placeholder="Дата заезда"
             type="text"
             onfocus="this.type = 'date'"
@@ -70,7 +70,7 @@
           />
         </div>
         <input
-          class="input-form"
+          class="input-form calendar"
           placeholder="Дата выезда"
           type="text"
           onfocus="this.type = 'date'"
@@ -195,13 +195,78 @@
                 <li>ванная комната с душевой</li>
               </ul>
               <div class="showcase__card__button-box">
-                <button class="book-button white">Подробнее</button>
-                <button class="book-button">Забронировать</button>
+                <button
+                  class="book-button white"
+                  onclick="window['book-dialog'].showModal()"
+                  aria-controls="book-dialog"
+                >
+                  Подробнее
+                </button>
+                <button
+                  class="book-button"
+                  onclick="window['book-dialog'].showModal()"
+                  aria-controls="book-dialog"
+                >
+                  Забронировать
+                </button>
               </div>
             </div>
           </article>
         </div>
       </div>
+      <dialog class="book-dialog" id="book-dialog">
+        <div class="book-dialog__textblock">
+          <p class="book-dialog__text subtitle-font">Бронирование дома</p>
+          <button
+            class="book-dialog__close-button"
+            type="submit"
+            value="Забронировать"
+            onclick="window['book-dialog'].close()"
+          >
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#1D1B20"/>
+</svg>
+          </button>
+          <img class="book-dialog__image" src="./images/1.png" />
+          <form action="" method="get" class="booking__form">
+            <div class="input-date-wrapper">
+              <input
+                class="input-form calendar"
+                placeholder="Дата заезда"
+                type="text"
+                onfocus="this.type = 'date'"
+                onblur="this.type = 'text'"
+                id="date-arrival"
+              />
+            </div>
+            <input
+              class="input-form calendar"
+              placeholder="Дата выезда"
+              type="text"
+              onfocus="this.type = 'date'"
+              onblur="this.type = 'text'"
+              id="date-departure"
+            />
+            <input
+              class="input-form"
+              placeholder="Гости"
+              type="number"
+              name="form-guest-value"
+              id="form-guest-value"
+              min="1"
+              max="20"
+            />
+            <div class="form__submit-button">
+              <input
+                class="book-button book-dialog__button"
+                type="submit"
+                value="Забронировать"
+                onclick="window['book-dialog'].close()"
+              />
+            </div>
+          </form>
+        </div>
+      </dialog>
     </section>
     <footer class="footer">
       <img src="./images/uchma-logo-white.png" class="header__logo" />
