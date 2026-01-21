@@ -174,10 +174,10 @@ a, link {
     text-decoration: none;
 }
 
-button {
+button, input {
     margin: 0;
     padding: 0;
     background: none;
-    border: 0;
+    border: none;
     color: inherit;
 }

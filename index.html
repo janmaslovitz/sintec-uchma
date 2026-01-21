@@ -21,7 +21,7 @@
       </nav>
       <div class="phone-block">
         <p class="phone-number">+1 (234) 567-88-99</p>
-        <button class="book-button">Забронировать</button>
+        <button class="button book-button">Забронировать</button>
       </div>
     </header>
     <section class="cover">
@@ -36,7 +36,7 @@
         loop
       ></video> -->
       <a href="#booking"
-        ><div class="cover__book-button">
+        ><div class="cover__booking-anchor">
           <p>Забронируйте сейчас!</p>
           <svg
             class="cover__icon"
@@ -56,19 +56,17 @@
           </svg></div
       ></a>
     </section>
-    <section class="booking" id="booking">
-      <h2 class="title-font">Забронировать дом</h2>
+    <section class="booking">
+      <h2 class="main-title">Забронировать дом</h2>
       <form action="" method="get" class="booking__form">
-        <div class="input-date-wrapper">
-          <input
-            class="input-form calendar"
-            placeholder="Дата заезда"
-            type="text"
-            onfocus="this.type = 'date'"
-            onblur="this.type = 'text'"
-            id="date-arrival"
-          />
-        </div>
+        <input
+          class="input-form calendar"
+          placeholder="Дата заезда"
+          type="text"
+          onfocus="this.type = 'date'"
+          onblur="this.type = 'text'"
+          id="date-arrival"
+        />
         <input
           class="input-form calendar"
           placeholder="Дата выезда"
@@ -87,60 +85,62 @@
           max="20"
         />
         <div class="form__submit-button">
-          <input class="book-button" type="submit" value="Подобрать дом" />
+          <input
+            class="button book-button"
+            id="choose-house-button"
+            type="submit"
+            value="Подобрать дом"
+          />
         </div>
       </form>
-      <p>Вам подходит 3 варианта:</p>
-      <div class="booking__items-list">
-        <div class="booking__item">
-          <article class="booking__card">
-            <div class="overlay">
+      <div class="booking__widget">
+        <p class="booking__house-options-title">Вам подходит 3 варианта:</p>
+        <div class="booking__items-list">
+          <div class="booking__item">
+            <article class="booking__card">
+              <img src="./images/1.png" alt="" class="booking__card-img" />
               <div class="booking__card-textblock">
-                <p class="booking__card-title">Дом "Охотничий"</p>
-                <ul class="booking__card-features">
-                  <li>30м²</li>
-                  <li>до 4 человек</li>
-                  <li>две раздельные спальни</li>
+                <p class="subtitle">Дом «Охотничий»</p>
+                <div class="booking__card-specs">
+                  <span class="booking__card__specs-places">до 6 мест</span>
+                  <span class="booking__card__specs-rooms">3 комн</span>
+                  <span class="booking__card__specs-space">62м²</span>
+                </div>
+                <ul class="booking__card__features">
+                  <li>уютная и просторная веранда</li>
+                  <li>отдельный кабинет с рабочим столом</li>
+                  <li>многозоновый климат-контроль</li>
+                  <li>ванная комната с душевой</li>
                 </ul>
+                <!-- <div class="booking__card__button-box"> -->
+                <!-- <button
+                  class="button about-button"
+                  id="booking__card-about-button"
+                  onclick="window['book-dialog'].showModal()"
+                  aria-controls="book-dialog"
+                >
+                  Подробнее
+                </button> -->
+                <button
+                  class="button book-button"
+                  id="booking__card-book-button"
+                  onclick="window['book-dialog'].showModal()"
+                  aria-controls="book-dialog"
+                >
+                  Забронировать
+                </button>
+                <!-- </div> -->
               </div>
-            </div>
-          </article>
-        </div>
-        <div class="booking__item">
-          <article class="booking__card">
-            <div class="overlay">
-              <div class="booking__card-textblock">
-                <p class="booking__card-title">Дом "Охотничий"</p>
-                <ul class="booking__card-features">
-                  <li>30м²</li>
-                  <li>до 4 человек</li>
-                  <li>две раздельные спальни</li>
-                </ul>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="booking__item">
-          <article class="booking__card">
-            <div class="overlay">
-              <div class="booking__card-textblock">
-                <p class="booking__card-title">Дом "Охотничий"</p>
-                <ul class="booking__card-features">
-                  <li>30м²</li>
-                  <li>до 4 человек</li>
-                  <li>две раздельные спальни</li>
-                </ul>
-              </div>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
       </div>
     </section>
     <section class="features">
-      <h2 class="title-font opposite">Формат отдыха</h2>
+      <h2 class="main-title title-opposite">Формат отдыха</h2>
       <ul class="features__list">
         <li class="features__item">
-          <h3 class="subtitle-font">Компанейский отдых</h3>
+          <h3 class="subtitle">Компанейский отдых</h3>
           <div class="features__item-textblock">
             <img class="features__item-image" src="./images/home.png" />
             <ul class="features__item-text">
@@ -151,7 +151,7 @@
           </div>
         </li>
         <li class="features__item">
-          <h3 class="subtitle-font">Активные приключения</h3>
+          <h3 class="subtitle">Активные приключения</h3>
           <div class="features__item-textblock">
             <img class="features__item-image" src="./images/buoy.png" />
             <ul class="features__item-text">
@@ -162,7 +162,7 @@
           </div>
         </li>
         <li class="features__item">
-          <h3 class="subtitle-font">Забота о себе</h3>
+          <h3 class="subtitle">Забота о себе</h3>
           <div class="features__item-textblock">
             <img class="features__item-image" src="./images/sun.png" />
             <ul class="features__item-text">
@@ -175,45 +175,76 @@
       </ul>
     </section>
 
-    <section class="showcase">
-      <h2 class="title-font">Наши дома</h2>
-      <div class="showcase__list">
-        <div class="showcase__item">
-          <article class="showcase__card">
-            <img src="./images/1.png" alt="" class="showcase__card-img" />
-            <div class="showcase__card-textblock">
-              <p class="subtitle-font">Дом «Охотничий»</p>
-              <div class="showcase__card-specs">
-                <span class="showcase__card__specs-places">до 6 мест</span>
-                <span class="showcase__card__specs-rooms">3 комн</span>
-                <span class="showcase__card__specs-space">62м²</span>
-              </div>
-              <ul class="showcase__card__features">
-                <li>уютная и просторная веранда</li>
-                <li>отдельный кабинет с рабочим столом</li>
-                <li>многозоновый климат-контроль</li>
-                <li>ванная комната с душевой</li>
-              </ul>
-              <div class="showcase__card__button-box">
-                <button
-                  class="book-button white"
-                  onclick="window['book-dialog'].showModal()"
-                  aria-controls="book-dialog"
-                >
-                  Подробнее
-                </button>
-                <button
-                  class="book-button"
-                  onclick="window['book-dialog'].showModal()"
-                  aria-controls="book-dialog"
-                >
-                  Забронировать
-                </button>
-              </div>
-            </div>
-          </article>
-        </div>
+    <section class="gallery">
+      <h2 class="main-title">Наши дома</h2>
+      <div class="gallery__container">
+        <figure class="gallery__item">
+          <img
+            src="./images/gallery/1.webp"
+            alt="Пейзаж"
+            class="gallery__image"
+            lazyload
+          />
+        </figure>
+        <figure class="gallery__item">
+          <img
+            src="./images/gallery/3.webp"
+            alt="Пейзаж"
+            class="gallery__image"
+            lazyload
+          />
+        </figure>
+        <figure class="gallery__item">
+          <img
+            src="./images/gallery/9.webp"
+            alt="Пейзаж"
+            class="gallery__image"
+            lazyload
+          />
+        </figure>
+        <figure class="gallery__item">
+          <img
+            src="./images/gallery/8.webp"
+            alt="Пейзаж"
+            class="gallery__image"
+            lazyload
+          />
+        </figure>
+        <figure class="gallery__item">
+          <img
+            src="./images/gallery/7.webp"
+            alt="Пейзаж"
+            class="gallery__image"
+            lazyload
+          />
+        </figure>
+        <figure class="gallery__item">
+          <img
+            src="./images/gallery/6.webp"
+            alt="Пейзаж"
+            class="gallery__image"
+            lazyload
+          />
+        </figure>
+        <figure class="gallery__item">
+          <img
+            src="./images/gallery/2.webp"
+            alt="Пейзаж"
+            class="gallery__image"
+            lazyload
+          />
+        </figure>
+        <figure class="gallery__item">
+          <img
+            src="./images/gallery/4.webp"
+            alt="Пейзаж"
+            class="gallery__image"
+            lazyload
+          />
+        </figure>
       </div>
+      <!-- Диалоговое окно бронирования объекта -->
+
       <dialog class="book-dialog" id="book-dialog">
         <div class="book-dialog__textblock">
           <p class="book-dialog__text subtitle-font">Бронирование дома</p>
@@ -223,9 +254,18 @@
             value="Забронировать"
             onclick="window['book-dialog'].close()"
           >
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#1D1B20"/>
-</svg>
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                fill="#1D1B20"
+              />
+            </svg>
           </button>
           <img class="book-dialog__image" src="./images/1.png" />
           <form action="" method="get" class="booking__form">
@@ -258,7 +298,7 @@
             />
             <div class="form__submit-button">
               <input
-                class="book-button book-dialog__button"
+                class="button book-button"
                 type="submit"
                 value="Забронировать"
                 onclick="window['book-dialog'].close()"
@@ -267,12 +307,14 @@
           </form>
         </div>
       </dialog>
+
+      <!-- Диалоговое окно бронирования объекта -->
     </section>
     <footer class="footer">
       <img src="./images/uchma-logo-white.png" class="header__logo" />
       <div class="phone-block">
         <p class="phone-number">+1 (234) 567-88-99</p>
-        <button class="book-button">Забронировать</button>
+        <button class="button book-button">Забронировать</button>
       </div>
     </footer>
   </body>

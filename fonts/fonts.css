@@ -1,26 +1,26 @@
 @font-face {
-    src: local("Montserrat"), url(../fonts/Montserrat-Regular.ttf);
+    src: local("Montserrat Regular"), url(../fonts/Montserrat-Regular.ttf);
     font-display: swap;
     font-family: "Montserrat Regular";
     font-weight: 400;
 }
 
 @font-face {
-    src: local("Montserrat"), url(../fonts/Montserrat-Bold.ttf);
+    src: local("Montserrat Bold"), url(../fonts/Montserrat-Bold.ttf);
     font-display: swap;
     font-family: "Montserrat Bold";
     font-weight: 700;
 }
 
 @font-face {
-    src: local("Montserrat"), url(../fonts/Montserrat-SemiBold.ttf);
+    src: local("Montserrat SemiBold"), url(../fonts/Montserrat-SemiBold.ttf);
     font-display: swap;
     font-family: "Montserrat SemiBold";
     font-weight: 600;
 }
 
 @font-face {
-    src: local("urbanSlavic"), url(../fonts/UrbanSlavic.otf);
+    src: local("UrbanSlavic"), url(../fonts/UrbanSlavic.otf);
     font-display: swap;
     font-family: "UrbanSlavic";
     font-weight: 600;
